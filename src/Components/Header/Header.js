@@ -1,7 +1,20 @@
+import Concerts from './Concerts'
+import Visit from './Visit'
+import Support from './Support'
+import About from './About'
+import Login from './Login'
+
 function Header() {
     return (
         <div>
-            <p> Header </p>
+
+            <Concerts />
+            <Visit />
+            <Support />
+            <About />
+            <Login />
+
+
         </div>
 
     )
