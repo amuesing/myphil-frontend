@@ -19,7 +19,7 @@ function Header() {
             <NavLink className="button" to="/about">
                 About Us
             </NavLink>
-            <NavLink className="button" to="/login">
+            <NavLink className="button" to="/auth">
                 Login
             </NavLink>
         </div>

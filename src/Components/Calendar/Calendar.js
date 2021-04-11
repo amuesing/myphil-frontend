@@ -13,8 +13,8 @@ function Calendar() {
 
     const concertObj = concerts.map((concertObj) => 
         <ConcertCard 
-            key={concertObj.id}
-            concert={concertObj}
+            key = {concertObj.id}
+            concert = {concertObj}
         />)
 
     return (

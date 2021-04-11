@@ -5,6 +5,8 @@ import Support from './Support/Support'
 import Visit from './Visit/Visit'
 import Calendar from './Calendar/Calendar'
 import About from './About/About'
+import Register from './Login/Register'
+import LoginModal from './Modals/LoginModal'
 
 import { Switch, Route, Redirect } from "react-router-dom"
 import ConcertDetail from './Calendar/ConcertDetail'
@@ -36,6 +38,12 @@ function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+          <Route exact path="/auth">
+            <LoginModal/>
           </Route>
 
 
