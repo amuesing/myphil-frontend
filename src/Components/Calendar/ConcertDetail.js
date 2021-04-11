@@ -1,15 +1,15 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
-import SeatSelector from '../Modals/SeatSelector'
+import SeatMap from "../Modals/SeatMap"
 
 function ConcertDetail() {
     const [concert, setConcert] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const params = useParams();
 
+    const params = useParams();
     const id = params.id;
 
     useEffect(() => {
@@ -43,7 +43,7 @@ function ConcertDetail() {
                 <Link className="form" to="/"> Buy Tickets </Link>
             </nav> */}
             </div>
-            <SeatSelector />
+            <SeatMap id={id}/>
         </div>
         
     )

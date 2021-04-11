@@ -1,5 +1,5 @@
 import Header from './Header/Header'
-import Homepage from './Homepage/Homepage.js'
+import Home from './Home/Home.js'
 import Login from './Login/Login'
 import Support from './Support/Support'
 import Visit from './Visit/Visit'
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Homepage />
+            <Home />
           </Route>
           <Route exact path="/calendar">
             <Calendar />
