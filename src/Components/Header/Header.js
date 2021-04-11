@@ -3,9 +3,8 @@ import { NavLink } from 'react-router-dom';
 function Header() {
 
     return (
-       
-        <div >
-            <NavLink className="button" to="/">
+        <div>
+            <NavLink className="logo" to="/">
             Home
             </NavLink>
             <NavLink className="button" to="/calendar">
@@ -23,11 +22,7 @@ function Header() {
             <NavLink className="button" to="/login">
                 Login
             </NavLink>
-
-
-
         </div>
-
     )
 }
 
