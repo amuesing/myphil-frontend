@@ -1,14 +1,13 @@
-import Header from './Components/Header/Header'
-import Homepage from './Components/Homepage/Homepage.js'
-import Login from './Components/Login/Login'
-import Support from './Components/Support/Support'
-import Visit from './Components/Visit/Visit'
-import Calendar from './Components/Calendar/Calendar'
-import About from './Components/About/About'
-// import Concert from './Components/Calendar/Concert'
+import Header from './Header/Header'
+import Homepage from './Homepage/Homepage.js'
+import Login from './Login/Login'
+import Support from './Support/Support'
+import Visit from './Visit/Visit'
+import Calendar from './Calendar/Calendar'
+import About from './About/About'
 
-import './App.css';
 import { Switch, Route, Redirect } from "react-router-dom"
+import ConcertDetail from './Calendar/ConcertDetail'
 
 function App() {
 
@@ -23,6 +22,9 @@ function App() {
           <Route exact path="/calendar">
             <Calendar />
           </Route>
+          <Route exact path="/calendar/:id">
+            <ConcertDetail />
+          </Route>
           <Route exact path="/login">
             <Login />
           </Route>
@@ -35,6 +37,7 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
+
 
 
           <Route exact path="/*">

@@ -1,28 +1,29 @@
-import { useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
-    const history = useHistory();
+
     return (
-        <div style={{display: 'flex', 
-        flexDirection: 'row', 
-        justifyContent:'flex-start', 
-        alignItems:'flex-start',
-        border: '2px solid black',}}>
-            <div style={{border: '2px solid red'}} className="content content-button" onClick={() => {history.push("/calendar")}}>
+       
+        <div >
+            <NavLink className="button" to="/">
+            Home
+            </NavLink>
+            <NavLink className="button" to="/calendar">
                 Concerts & Tickets
-            </div>
-            <div style={{border: '2px solid red'}} className="content content-button" onClick={() => {history.push("/visit")}}>
+            </NavLink>
+            <NavLink className="button" to="/visit">
                 Visit Us
-            </div>
-            <div style={{border: '2px solid red'}} className="content content-button" onClick={() => {history.push("/support")}}>
+            </NavLink>
+            <NavLink className="button" to="/support">
                 Support Us
-            </div>
-            <div style={{border: '2px solid red'}} className="content content-button" onClick={() => {history.push("/about")}}>
+            </NavLink>
+            <NavLink className="button" to="/about">
                 About Us
-            </div>
-            <div style={{border: '2px solid red'}} className="content content-button" onClick={() => {history.push("/login")}}>
+            </NavLink>
+            <NavLink className="button" to="/login">
                 Login
-            </div>
+            </NavLink>
+
 
 
         </div>

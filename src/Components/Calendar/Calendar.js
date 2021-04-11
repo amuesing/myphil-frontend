@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ConcertCard from './Concert'
+import ConcertCard from './ConcertCard'
+
 
 function Calendar() {
     const [concerts, setConcerts] = useState([])
@@ -10,11 +11,16 @@ function Calendar() {
         .then(setConcerts)
     }, [])
 
-    const concertObj = concerts.map((concertObj) => <ConcertCard key={concertObj.id} date={concertObj.date} title={concertObj.title} price_range={concertObj.price_range} image_url={concertObj.image_url}/>)
+    const concertObj = concerts.map((concertObj) => 
+        <ConcertCard 
+            key={concertObj.id}
+            concert={concertObj}
+        />)
 
     return (
-        <div>
-            {concertObj}
+ 
+        <div >
+             {concertObj}
         </div>
     )
 }

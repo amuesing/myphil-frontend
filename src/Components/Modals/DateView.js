@@ -1,10 +1,10 @@
 import Calendar from 'react-calendar'
 
-function Schedule() {
+function DateView() {
 
     return (
         <div><Calendar /></div>
     )
 }
 
-export default Schedule
+export default DateView
