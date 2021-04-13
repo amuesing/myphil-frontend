@@ -1,6 +1,9 @@
 function Homepage() {
     return (
-        <div style={{border: '2px solid black'}}>Homepage</div>
+        <div style={{border: '2px solid black'}}>
+            Homepage
+        </div>
+
     )
 }
 

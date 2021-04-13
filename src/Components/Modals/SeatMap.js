@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { NavLink } from 'react-router-dom';
+import SeatContainer from '../Calendar/SeatContainer.js'
 // import SeatPicker from "react-seat-picker"
 
 Modal.setAppElement("#root");
@@ -8,9 +9,6 @@ Modal.setAppElement("#root");
 function SeatMap({id}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isInnerOpen, setInnerOpen] = useState(false);
-  const [seat, setSeat] = useState("");
-
-  console.log(seat)
 
   function handleCheckout(e) {
     e.preventDefault();
@@ -45,14 +43,7 @@ function SeatMap({id}) {
         <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats">
           <div>
             <div>
-              <h2 style={{ color: "black" }}> Select Seat: </h2>
-              <form onSubmit={handleCheckout}>
-                <select>
-                  <option value={seat} onChange={(e) => setSeat(e.target.value)}> Seat 1 </option>
-                  <option value={seat} onChange={(e) => setSeat(e.target.value)}> Seat 2 </option>
-                  <option value={seat} onChange={(e) => setSeat(e.target.value)}> Seat 3 </option>
-                </select>
-                </form>
+              <SeatContainer handleCheckout = {handleCheckout}/>
             </div>
             <h2 style={{ color: "black" }}> Payment Info </h2>
             <button onClick={toggleModal}>Close</button>

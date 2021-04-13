@@ -17,7 +17,7 @@ function Register() {
             credit:0
           }),
         })
-          .then((r) => r.json())
+          // .then((r) => r.json())
         //   .then((newUser) => onAddUser(newUser));
       }
 

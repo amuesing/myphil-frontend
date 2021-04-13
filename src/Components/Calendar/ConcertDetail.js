@@ -8,7 +8,6 @@ function ConcertDetail() {
     const [concert, setConcert] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
-
     const params = useParams();
     const id = params.id;
 
@@ -39,9 +38,6 @@ function ConcertDetail() {
             {/* {price_range} */}
             {/* {event_info} */}
             {/* <img src={image_url} alt={title}/> */}
-            {/* <nav>
-                <Link className="form" to="/"> Buy Tickets </Link>
-            </nav> */}
             </div>
             <SeatMap id={id}/>
         </div>
