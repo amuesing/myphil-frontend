@@ -11,10 +11,16 @@ function AccountDetails({account}) {
         .then(setTickets)
     }, [])
 
+    function handleDeletedTicket(id) {
+        const updatedTicketsArray = tickets.filter((ticket) => ticket.id !== id);
+        setTickets(updatedTicketsArray)
+    }
+
     const ticket = tickets.map((ticket) => 
     <Tickets
         key = {ticket.id}
         ticket = {ticket}
+        handleDeletedTicket = {handleDeletedTicket}
     />)
     
     return (

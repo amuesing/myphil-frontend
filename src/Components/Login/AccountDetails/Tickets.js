@@ -1,10 +1,19 @@
-function Tickets({ ticket }) {
+import React, { useState } from "react";
+
+function Tickets({ ticket, handleDeletedTicket }) {
+    const { deleteTicket, setDeleteTicket } = useState(true)
+
     const id = ticket.id;
+
+    function handleToggleTicket() {
+        setDeleteTicket((deleteTicket) => !setDeleteTicket)
+    }
    
     function handleTicketDelete() {
         fetch(`http://localhost:3000/tickets/${id}`, {
             method: 'DELETE'
         })
+        handleDeletedTicket(id)
     }
 
     return (
