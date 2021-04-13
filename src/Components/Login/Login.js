@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import AccountDetails from './AccountDetails/AccountDetails'
+// import Tickets from './AccountDetails/Tickets'
 
 function Login() {
     const [user, setUser] = useState([])
@@ -11,7 +12,6 @@ function Login() {
         .then(setUser)
     }, [])
 
-
     const account = user.map((account) => 
     <AccountDetails
         key = {account.id}
@@ -21,6 +21,7 @@ function Login() {
     return (
         <div>
             {account}
+            {/* {tickets} */}
         </div>
     )
 }

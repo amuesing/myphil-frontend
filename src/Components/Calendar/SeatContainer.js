@@ -11,8 +11,6 @@ function SeatContainer() {
         .then(setSeats)
     }, [])
 
-    console.log(seats)
-
     const seatObj = seats.map((seatObj) => 
         <SeatCard
             key = {seatObj.id}
