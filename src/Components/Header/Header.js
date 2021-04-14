@@ -19,8 +19,8 @@ function Header() {
             <NavLink className="button" to="/about">
                 About Us
             </NavLink>
-            <NavLink className="button" to="/auth">
-                Login
+            <NavLink className="button" to="/account">
+                Account
             </NavLink>
         </div>
     )

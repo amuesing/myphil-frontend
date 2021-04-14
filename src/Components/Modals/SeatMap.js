@@ -47,7 +47,7 @@ function SeatMap({id}) {
             </div>
             <h2 style={{ color: "black" }}> Payment Info </h2>
             <button onClick={toggleModal}>Close</button>
-            <button type="submit" onClick={toggleInnerModal}> Checkout </button>
+            {/* <button type="submit" onClick={toggleInnerModal}> Checkout </button>
             <Modal isOpen={isInnerOpen} onRequestClose={toggleInnerModal} contentLabel="Checkout">
               <div style={{color: 'black'}}>
                 Thank You For Your Purchase!
@@ -57,7 +57,7 @@ function SeatMap({id}) {
                   Close
                 </NavLink>
               </button>
-            </Modal>
+            </Modal> */}
           </div>
         </Modal>
     </div>
