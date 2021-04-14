@@ -11,7 +11,8 @@ function SeatContainer() {
         .then(setSeats)
     }, [])
 
-    function handleSoldSeat(id) {const updatedSeats = seats.map((seat) =>{
+    function handleSoldSeat(id) {
+        const updatedSeats = seats.map((seat) => {
         if (seat.id === id) {
             seat.is_open = false }
             return seat

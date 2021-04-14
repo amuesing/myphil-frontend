@@ -5,7 +5,7 @@ function Header() {
     return (
         <div>
             <NavLink className="logo" to="/">
-            Home
+                MyPhil
             </NavLink>
             <NavLink className="button" to="/calendar">
                 Concerts & Tickets

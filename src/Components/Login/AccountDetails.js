@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import Tickets from './Tickets'
+import Tickets from './AccountDetails/Tickets'
 
-function AccountDetails({account}) {
+import UpdateModal from '../Modals/UpdateModal'
+
+function AccountDetails({account, handleAccountUpdate}) {
     const [tickets, setTickets] = useState([])
 
     useEffect(() => {
@@ -27,6 +29,10 @@ function AccountDetails({account}) {
         <div style={{color: "white"}}>
             {account.email}
             {ticket}
+            <UpdateModal 
+                account = {account} 
+                handleAccountUpdate = {handleAccountUpdate}
+            />
         </div>
     )
 }

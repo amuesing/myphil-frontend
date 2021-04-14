@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 function Tickets({ ticket, handleDeletedTicket }) {
     const id = ticket.id;

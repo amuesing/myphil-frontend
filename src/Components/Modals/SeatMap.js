@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import SeatContainer from '../Calendar/SeatContainer.js'
 // import SeatPicker from "react-seat-picker"
 
@@ -8,7 +8,7 @@ Modal.setAppElement("#root");
 
 function SeatMap({id}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isInnerOpen, setInnerOpen] = useState(false);
+  // const [isInnerOpen, setInnerOpen] = useState(false);
 
   function handleCheckout(e) {
     e.preventDefault();
@@ -25,7 +25,6 @@ function SeatMap({id}) {
     }),
     })
     .then((r) => r.json())
-    .then(console.log(id))
 }
 
 
@@ -33,9 +32,9 @@ function SeatMap({id}) {
     setIsOpen(!isOpen);
   }
 
-  function toggleInnerModal() {
-    setInnerOpen(!isInnerOpen);
-  }
+  // function toggleInnerModal() {
+  //   setInnerOpen(!isInnerOpen);
+  // }
 
   return (
     <div>
