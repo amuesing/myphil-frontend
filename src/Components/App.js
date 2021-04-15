@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
         <Header />
         <Switch>
           <Route exact path="/">
@@ -59,8 +58,6 @@ function App() {
               }} />
           </Route>
         </Switch>
-
-      </header>
     </div>
   );
 }

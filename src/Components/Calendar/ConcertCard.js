@@ -4,12 +4,20 @@ function ConcertCard({concert}) {
     const link = `/calendar/${concert.id}`
 
     return (
-        
-        <Link to={link}>
+        <section>
+        <Link to={link} className="center">
+            <div className="card">
+                <div className="concert-card">
+                    <img className="concert-card-image" src={concert.image_url}/>
+                </div>
+            </div>
             <span className="phase-buttons">
                 {concert.title}
+                {" || "}
+                {concert.date}
             </span>
         </Link>
+        </section>
         
     )
 }

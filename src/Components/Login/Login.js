@@ -18,7 +18,6 @@ function Login() {
                 return user
             }
         })
-
     }
 
     const account = users.map((account) => 
@@ -29,10 +28,10 @@ function Login() {
     />)
 
     return (
-        <div>
+        <section>
             {account}
             {/* {tickets} */}
-        </div>
+        </section>
     )
 }
 

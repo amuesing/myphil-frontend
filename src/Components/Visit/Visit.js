@@ -1,8 +1,8 @@
 function Visit() {
     return (
-        <div>
-            <p> Visit Us </p>
-        </div>
+        <section>
+            <p> Plan Your Visit </p>
+        </section>
 
     )
 }

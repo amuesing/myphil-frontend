@@ -20,27 +20,47 @@ function ConcertDetail() {
         })
     }, [id])
 
-    if (!isLoaded) return <h2>Loading...</h2>;
+    if (!isLoaded) return <h2>{null}</h2>;
 
     const { 
-            title, 
-                // time, 
-                // price_range, 
-                // event_info, 
-                // image_url 
+            title,
+            time,
+            date,
+                price_range, 
+                event_info, 
+            image_url 
         } = concert;
 
     return (
-        <div>
+        <section>
             <div>
-            {title}
+
             {/* {time} */}
             {/* {price_range} */}
             {/* {event_info} */}
-            {/* <img src={image_url} alt={title}/> */}
+            <img src={image_url} alt={title} className="concert-detail-image"/>
+                <div className="card">
+                    <ul>
+                    <li>
+                    {date}
+                    </li>
+                    <li>
+                    {time}
+                    </li>
+                    <li>
+                    {price_range}
+                    </li>
+                    <li>
+                    {title}
+                    </li>
+                    <li>
+                    {event_info}
+                    </li>
+                    </ul>
+                </div>
             </div>
             <SeatMap id={id}/>
-        </div>
+        </section>
         
     )
 }

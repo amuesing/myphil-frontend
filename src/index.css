@@ -1,21 +1,18 @@
 :root {
-  --turquoise: #00efe1;
-  --mid-turquoise: #14d5c9;
-  --dark-turquoise: #00333f;
   --black: #030416;
   --white: #fff;
   --grey: #d6e2e7;
   --dark-grey: #7f8a8e;
   --yellow: #f9c51a;
   --orange: #ff5c00;
-  --fuschia: #e80352;
+  --red: #D22630;
   --blue: #338fff;
   --blue-dark: #145cb3;
   --purple: #cda2ff;
   --green: #00ef7c;
-  --color: var(--white);
-  --background: var(--black);
-  --primary: var(--turquoise);
+  --color: var(--black);
+  --background: var(--white);
+  --primary: var(--red);
 }
 
 /* layout */
@@ -26,7 +23,7 @@
 }
 
 body {
-  font-family: "Fira Code", monospace;
+  font-family: "helvetica";
   font-size: 16px;
   color: var(--color);
   background-color: var(--background);
@@ -62,7 +59,7 @@ button {
   cursor: pointer;
   color: var(--primary);
   background-color: var(--background);
-  border: 2px solid var(--dark-turquoise);
+  /* border: 2px solid var(--dark-grey); */
   transition: background-color 0.2s;
   line-height: 1;
 }
@@ -75,7 +72,7 @@ button:hover {
   outline: none;
   color: var(--white);
   background-color: var(--primary);
-  border: 2px solid var(--primary);
+  /* border: 2px solid var(--primary); */
 }
 
 button:disabled {
@@ -128,16 +125,6 @@ a,
   cursor: pointer;
 }
 
-a:hover,
-.more-link:hover {
-  background-color: var(--blue);
-  border-bottom: 1px solid var(--blue);
-}
-
-.more-link:hover::after {
-  content: " ➡";
-}
-
 h1,
 h2,
 h3,
@@ -147,11 +134,11 @@ h6 {
   margin-bottom: 1rem;
 }
 
-hr {
+/* hr {
   margin: 1rem 0;
   border: none;
   border-bottom: 2px solid var(--dark-turquoise);
-}
+} */
 
 span[role="img"] {
   color: transparent;
@@ -182,15 +169,20 @@ header h1 a {
 
 header h1 a:hover {
   border-bottom: none;
-  background-color: transparent;
+  background-color: var(--mid-turquoise);
 }
 
 .logo {
-  color: var(--turquoise);
-  font-size: 1.25em;
-  font-family: Helvetica;
-  margin-right: 0.5rem;
+height: 152px;
+width: 294px;
+background-color: var(--red);
 }
+
+.logo_img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 header nav > * {
   margin: 0 0.5rem;
@@ -214,7 +206,7 @@ header nav > * {
 }
 
 .form .error {
-  color: var(--fuschia);
+  color: var(--red);
   margin-bottom: 1rem;
 }
 
@@ -255,50 +247,44 @@ header nav > * {
   margin: 0.5rem 0;
 }
 
-.project-image {
+/* concert card */
+
+.concert-card {
   position: relative;
+  width: 266px;
+  height: 148px;
 }
 
-.project-image img {
-  width: 100%;
-  max-width: 400px;
+.concert-card-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: 200px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+  border: 5px solid black;
 }
 
-.project-image .claps {
-  color: transparent;
-  text-shadow: 0 0 0 var(--turquoise);
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.concert-detail-image {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.project-image .claps:focus,
-.project-image .claps:hover {
-  color: transparent;
-  text-shadow: 0 0 0 var(--color);
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  margin: 0.25rem 0;
-}
-
-.badge.blue {
-  background-color: var(--blue);
-  border: 2px solid var(--blue-dark);
-  color: var(--white);
-}
-
-/* project detail */
-.project-detail {
+.concert-detail {
   display: flex;
-  width: 800px;
-  max-width: 90vw;
+  flex-direction: row;
+  width: 500px;
+  margin: 0 auto;
 }
 
-.project-detail .details {
-  flex: 1;
-  margin-left: 1rem;
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.concertObj {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  
 }

@@ -11,7 +11,7 @@ function Tickets({ ticket, handleDeletedTicket }) {
     }
 
     return (
-        <div style={{color: "white"}}>
+        <div>
             {ticket.seat_id}
             <button onClick={handleTicketDelete}> Cancel Ticket </button>
         </div>

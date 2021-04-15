@@ -40,7 +40,7 @@ function SeatMap({id}) {
     <div>
       <button onClick={toggleModal}> Select Seats </button>
         <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats">
-          <div>
+          <section>
             <div>
               <SeatContainer handleCheckout = {handleCheckout}/>
             </div>
@@ -57,7 +57,7 @@ function SeatMap({id}) {
                 </NavLink>
               </button>
             </Modal> */}
-          </div>
+          </section>
         </Modal>
     </div>
   );

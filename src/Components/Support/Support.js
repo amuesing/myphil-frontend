@@ -1,8 +1,8 @@
 function Support() {
     return (
-        <div>
+        <section>
             <p> Support Us </p>
-        </div>
+        </section>
 
     )
 }

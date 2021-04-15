@@ -26,7 +26,7 @@ function AccountDetails({account, handleAccountUpdate}) {
     />)
     
     return (
-        <div style={{color: "white"}}>
+        <div>
             {account.email}
             {ticket}
             <UpdateModal 
