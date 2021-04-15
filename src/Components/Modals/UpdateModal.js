@@ -49,7 +49,7 @@ function UpdateModal({account, handleAccountUpdate}) {
             <button onClick={toggleModal}> 
                 Update Information 
             </button>
-            <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats">
+            <Modal isOpen={isOpen} onRequestClose={toggleModal}>
                 <div>
                     <h2>Update Account Information</h2>
                     <form onSubmit={handleSubmit}>

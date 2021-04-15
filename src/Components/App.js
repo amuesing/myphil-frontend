@@ -1,11 +1,11 @@
 import Header from './Header/Header'
 import Home from './Home/Home.js'
-import Login from './Login/Login'
+import Login from './Account/Login'
 import Support from './Support/Support'
 import Visit from './Visit/Visit'
 import Calendar from './Calendar/Calendar'
 import About from './About/About'
-import Register from './Login/Register'
+import Register from './Account/Register'
 // import LoginModal from './Modals/LoginModal'
 
 

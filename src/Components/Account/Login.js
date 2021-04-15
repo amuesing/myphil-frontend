@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import AccountDetails from './AccountDetails'
-// import Tickets from './AccountDetails/Tickets'
 
 function Login() {
     const [users, setUsers] = useState([])

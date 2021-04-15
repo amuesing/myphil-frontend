@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
-import SeatMap from "../Modals/SeatMap"
+import SeatMap from "../Modals/SeatMapModal"
 
 function ConcertDetail() {
     const [concert, setConcert] = useState(null);
@@ -20,48 +20,38 @@ function ConcertDetail() {
         })
     }, [id])
 
-    if (!isLoaded) return <h2>{null}</h2>;
+    if (!isLoaded) return <h2> {null} </h2>;
 
     const { 
             title,
             time,
             date,
-                price_range, 
-                event_info, 
+            // price_range, 
+            event_info, 
             image_url 
         } = concert;
 
     return (
         <section>
             <div>
-
-            {/* {time} */}
-            {/* {price_range} */}
-            {/* {event_info} */}
             <img src={image_url} alt={title} className="concert-detail-image"/>
                 <div className="card">
-                    <ul>
-                    <li>
-                    {date}
-                    </li>
-                    <li>
-                    {time}
-                    </li>
-                    <li>
-                    {price_range}
-                    </li>
-                    <li>
-                    {title}
-                    </li>
-                    <li>
-                    {event_info}
-                    </li>
-                    </ul>
+                    <span>
+                        {date}
+                    </span>
+                    <span>
+                        {time}
+                    </span>
+                    <span>
+                        {title}
+                    </span>
+                    <span>
+                        {event_info}
+                    </span>
                 </div>
             </div>
             <SeatMap id={id}/>
-        </section>
-        
+        </section>  
     )
 }
 

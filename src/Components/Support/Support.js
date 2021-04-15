@@ -1,9 +1,11 @@
 function Support() {
     return (
         <section>
-            <p> Support Us </p>
+            <div> 
+                Play Your Part
+                <img className="about-detail-image" src="https://res.cloudinary.com/nyphil/image/upload/f_auto,q_auto/v1617301709/images/support/SettingStage-1884x1048.jpg"/>
+            </div>
         </section>
-
     )
 }
 

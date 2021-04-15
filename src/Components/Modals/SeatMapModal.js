@@ -25,8 +25,7 @@ function SeatMap({id}) {
     }),
     })
     .then((r) => r.json())
-}
-
+  }
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -38,14 +37,17 @@ function SeatMap({id}) {
 
   return (
     <div>
-      <button onClick={toggleModal}> Select Seats </button>
+      <button onClick={toggleModal}> 
+      Select Seats 
+      </button>
         <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats">
           <section>
             <div>
               <SeatContainer handleCheckout = {handleCheckout}/>
             </div>
-            <h2 style={{ color: "black" }}> Payment Info </h2>
-            <button onClick={toggleModal}>Close</button>
+            <button onClick={toggleModal}>
+              Close 
+            </button>
             {/* <button type="submit" onClick={toggleInnerModal}> Checkout </button>
             <Modal isOpen={isInnerOpen} onRequestClose={toggleInnerModal} contentLabel="Checkout">
               <div style={{color: 'black'}}>
