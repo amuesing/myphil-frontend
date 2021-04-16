@@ -32,8 +32,8 @@ function SeatContainer() {
 
     return (
  
-        <div >
-             {seatObj}
+        <div>
+            {seatObj}
         </div>
     )
 }

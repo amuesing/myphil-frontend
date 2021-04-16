@@ -4,8 +4,9 @@ import TicketCard from './TicketCard'
 import TicketModal from '../Modals/TicketModal'
 import UpdateModal from '../Modals/UpdateModal'
 
-function AccountDetails({account, handleAccountUpdate}) {
+function AccountDetails({ account, handleAccountUpdate }) {
     const [tickets, setTickets] = useState([])
+
 
     useEffect(() => {
         fetch('http://localhost:3000/tickets')
@@ -18,11 +19,23 @@ function AccountDetails({account, handleAccountUpdate}) {
         setTickets(updatedTicketsArray)
     }
 
+    function handleUpdateTicketsArray(id) {
+        console.log("hi") }
+        // const updatedTickets = tickets.map((ticket) => {
+        // if (ticket.id === id) {
+        //     ticket.is_open = false }
+        //     return ticket
+        // },
+        // )
+        // setTickets(updatedTickets)}
+
+
     const ticket = tickets.map((ticket) => 
     <TicketCard
         key = {ticket.id}
         ticket = {ticket}
         handleDeletedTicket = {handleDeletedTicket}
+        handleUpdateTicketsArray = {handleUpdateTicketsArray}
     />)
     
     return (
