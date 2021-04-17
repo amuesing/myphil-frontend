@@ -8,7 +8,7 @@ function ConcertCard({concert}) {
         <Link to={link} className="center">
             <div className="card">
                 <div className="concert-card">
-                    <img className="concert-card-image" src={concert.image_url}/>
+                    <img alt="concert" className="concert-card-image" src={concert.image_url}/>
                 </div>
             </div>
             <span className="phase-buttons">

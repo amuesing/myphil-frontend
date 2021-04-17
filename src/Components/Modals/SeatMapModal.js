@@ -3,6 +3,7 @@ import Modal from "react-modal";
 // import { NavLink } from 'react-router-dom';
 import SeatContainer from '../Calendar/SeatContainer.js'
 // import SeatPicker from "react-seat-picker"
+import SeatPicker from '../Calendar/SeatPicker'
 
 Modal.setAppElement("#root");
 
@@ -44,6 +45,7 @@ function SeatMap({id}) {
           <section>
             <div>
               <SeatContainer handleCheckout = {handleCheckout}/>
+              <SeatPicker />
             </div>
             <button onClick={toggleModal}>
               Close 
