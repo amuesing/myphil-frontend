@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react';
 // import SeatDetail from './SeatDetail'
 // import SeatCard from '../Calendar/SeatCard'
 
-function TicketCard({ ticket, handleDeletedTicket }) {
+function TicketCard({ ticket, handleDeletedTicket, seatObj }) {
     const [seats, setSeats] = useState([]);
     const [newSeatId, setNewSeatId] = useState([]);
     const [ticketSeatId, setTicketSeatId] = useState(ticket.seat_id)
 
     const id = ticket.id;
+    const seatId = ticket.seat_id        
 
     function handleChange(e) {
         setNewSeatId(e.target.value)
@@ -22,7 +23,25 @@ function TicketCard({ ticket, handleDeletedTicket }) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ seat_id:newSeatId })
-        })
+        }) 
+        .then(
+            fetch(`http://localhost:3000/seats/${seatId}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ isReserved:false })
+          })
+        )
+        .then(
+            fetch(`http://localhost:3000/seats/${newSeatId}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ isReserved:true })
+          })
+        )
         .then(setTicketSeatId(newSeatId))
         // .then(() => handleUpdateTicketsArray(id))
     }
@@ -40,7 +59,7 @@ function TicketCard({ ticket, handleDeletedTicket }) {
         .then(setSeats);
     }, []);
 
-    const seat = seats.map(seat => 
+    const seat = seats.map(seat =>
         <option value={seat.id}>
             {seat.section}
             {" || "}
