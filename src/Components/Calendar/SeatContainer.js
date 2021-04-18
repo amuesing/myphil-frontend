@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import SeatCard from './SeatCard'
+// import SeatChart from './SeatChart'
 
 function SeatContainer() {
     const [seats, setSeats] = useState([])
@@ -14,14 +15,14 @@ function SeatContainer() {
     function handleSoldSeat(id) {
         const updatedSeats = seats.map((seat) => {
         if (seat.id === id) {
-            seat.is_open = false }
+            seat.isReserved = true }
             return seat
         },
         )
         setSeats(updatedSeats)}
 
 
-    const updatedSeatsArray = seats.filter((seat) => seat.is_open === true);
+    const updatedSeatsArray = seats.filter((seat) => seat.isReserved === false);
 
     const seatObj = updatedSeatsArray.map((seatObj) => 
         <SeatCard
@@ -33,6 +34,7 @@ function SeatContainer() {
     return (
  
         <div>
+            {/* <SeatChart seats={seats}/> */}
             {seatObj}
         </div>
     )

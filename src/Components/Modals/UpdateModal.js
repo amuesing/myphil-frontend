@@ -5,15 +5,16 @@ Modal.setAppElement("#root");
 
 function UpdateModal({account, handleAccountUpdate}) {
     const [isOpen, setIsOpen] = useState(false);
-    const [isEmail, setEmail] = useState("");
-    const [isPassphrase, setPassphrase] = useState("");
-    const [isFirstName, setFirstName] = useState("");
-    const [isLastName, setLastName] = useState("");
-    const [isAddress1, setAddress1] = useState("");
-    const [isAddress2, setAddress2] = useState("");
-    const [isCity, setCity] = useState("");
-    const [isState, setState] = useState("");
-    const [isZip, setZip] = useState("")
+    const [isEmail, setEmail] = useState(account.email);
+    const [isPassphrase, setPassphrase] = useState(account.passphrase);
+    const [isFirstName, setFirstName] = useState(account.first_name);
+    const [isLastName, setLastName] = useState(account.last_name);
+    const [isAddress1, setAddress1] = useState(account.address1);
+    const [isAddress2, setAddress2] = useState(account.address2);
+    const [isCity, setCity] = useState(account.city);
+    const [isState, setState] = useState(account.state);
+    const [isZip, setZip] = useState(account.zip);
+    // const [userInfo, setUserInfo] = useState({'passphrase': account.passphrase})
 
     const id = account.id
 
@@ -49,8 +50,8 @@ function UpdateModal({account, handleAccountUpdate}) {
             <button onClick={toggleModal}> 
                 Update Information 
             </button>
-            <Modal isOpen={isOpen} onRequestClose={toggleModal}>
-                <div>
+            <Modal isOpen={isOpen} onRequestClose={toggleModal} className="modal">
+                <div className="modal-content">
                     <h2>Update Account Information</h2>
                     <form onSubmit={handleSubmit}>
                         <input
@@ -59,6 +60,7 @@ function UpdateModal({account, handleAccountUpdate}) {
                         placeholder={account.email}
                         value={isEmail}
                         onChange={(e) => setEmail(e.target.value)}
+                        // onChange={(e) => setUserInfo({...userInfo, 'email': e.target.value})}
                         />
                         <input
                         type="text"

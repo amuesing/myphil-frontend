@@ -15,8 +15,8 @@ function LoginModal() {
 
   return (
     <div className="App">
-      <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="My dialog">
-          <div style={{color: "black"}}>
+      <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="My dialog" classname="modal">
+          <div style={{color: "black"}} className="modal-content">
                 <form>
                     <input
                     type="text"

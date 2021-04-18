@@ -19,7 +19,7 @@ function SeatCard({ seat, handleSoldSeat }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ is_open:false })
+        body: JSON.stringify({ isReserved:true })
       })
     )
     .then(() => handleSoldSeat(id))

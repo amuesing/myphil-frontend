@@ -19,8 +19,7 @@ function AccountDetails({ account, handleAccountUpdate }) {
         setTickets(updatedTicketsArray)
     }
 
-    function handleUpdateTicketsArray(id) {
-        console.log("hi") }
+    function handleUpdateTicketsArray(id) { }
         // const updatedTickets = tickets.map((ticket) => {
         // if (ticket.id === id) {
         //     ticket.is_open = false }
@@ -40,12 +39,6 @@ function AccountDetails({ account, handleAccountUpdate }) {
     
     return (
         <div className="card">
-            <span>
-                ${account.credit}
-            </span>
-            <span>
-                {account.email}
-            </span>
             <span>
                 {account.first_name}
             </span>
@@ -67,14 +60,19 @@ function AccountDetails({ account, handleAccountUpdate }) {
             <span>
                 {account.zip}
             </span>
-            <UpdateModal 
-                account = {account} 
-                handleAccountUpdate = {handleAccountUpdate}
-            />
-            <TicketModal 
-                ticket = {ticket}
-            />
-        </div>
+            <span>
+                {account.email}
+            </span>
+                <div className="form_style">
+                    <UpdateModal 
+                        account = {account} 
+                        handleAccountUpdate = {handleAccountUpdate}
+                    />
+                    <TicketModal 
+                        ticket = {ticket}
+                    />
+                </div>
+            </div>
     )
 }
 

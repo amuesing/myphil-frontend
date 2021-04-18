@@ -15,14 +15,13 @@ function TicketModal({ticket}) {
             <button onClick={toggleModal}> 
             View Tickets
             </button>
-            <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="View Tickets">
-                <div>
+            <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="View Tickets" className="modal">
+                <div className="modal-content">
                     {ticket}
+                    <button onClick={toggleModal}>
+                        Close
+                    </button>
                 </div>
-                <button onClick={toggleModal}>
-                    Close
-                </button>
-
             </Modal>
         </div>
     )

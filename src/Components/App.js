@@ -6,6 +6,7 @@ import Visit from './Visit/Visit'
 import Calendar from './Calendar/Calendar'
 import About from './About/About'
 import Register from './Account/Register'
+import Sidebar from './Home/Sidebar'
 // import LoginModal from './Modals/LoginModal'
 
 
@@ -16,7 +17,12 @@ function App() {
 
   return (
     <div className="App">
+      <section>
         <Header />
+      </section>
+      {/* <section>
+        <Sidebar />
+      </section> */}
         <Switch>
           <Route exact path="/">
             <Home />

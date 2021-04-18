@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 // import { NavLink } from 'react-router-dom';
 import SeatContainer from '../Calendar/SeatContainer.js'
-// import SeatPicker from "react-seat-picker"
-import SeatPicker from '../Calendar/SeatPicker'
+
 
 Modal.setAppElement("#root");
 
@@ -11,22 +10,20 @@ function SeatMap({id}) {
   const [isOpen, setIsOpen] = useState(false);
   // const [isInnerOpen, setInnerOpen] = useState(false);
 
-  function handleCheckout(e) {
-    e.preventDefault();
-    fetch("http://localhost:3000/tickets", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-        user_id:1,
-        seat_id:1,
-        concert_id:5,
-        price:83
-    }),
-    })
-    .then((r) => r.json())
-  }
+  // function handleCheckout(e) {
+  //   e.preventDefault();
+  //   fetch("http://localhost:3000/tickets", {
+  //   method: "POST",
+  //   headers: {
+  //       "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //       user_id:1,
+  //       seat_id:1,
+  //   }),
+  //   })
+  //   .then((r) => r.json())
+  // }
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -41,11 +38,10 @@ function SeatMap({id}) {
       <button onClick={toggleModal}> 
       Select Seats 
       </button>
-        <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats">
+        <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats" className="modal">
           <section>
-            <div>
-              <SeatContainer handleCheckout = {handleCheckout}/>
-              <SeatPicker />
+            <div className="modal-content">
+              <SeatContainer />
             </div>
             <button onClick={toggleModal}>
               Close 

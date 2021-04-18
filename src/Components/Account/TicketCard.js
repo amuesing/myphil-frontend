@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 // import SeatDetail from './SeatDetail'
 // import SeatCard from '../Calendar/SeatCard'
 
-function TicketCard({ ticket, handleDeletedTicket, handleUpdateTicketsArray }) {
+function TicketCard({ ticket, handleDeletedTicket }) {
     const [seats, setSeats] = useState([]);
     const [newSeatId, setNewSeatId] = useState([]);
+    const [ticketSeatId, setTicketSeatId] = useState(ticket.seat_id)
 
     const id = ticket.id;
 
@@ -22,7 +23,8 @@ function TicketCard({ ticket, handleDeletedTicket, handleUpdateTicketsArray }) {
             },
             body: JSON.stringify({ seat_id:newSeatId })
         })
-        .then(() => handleUpdateTicketsArray(id))
+        .then(setTicketSeatId(newSeatId))
+        // .then(() => handleUpdateTicketsArray(id))
     }
     
     function handleTicketDelete() {
@@ -49,7 +51,7 @@ function TicketCard({ ticket, handleDeletedTicket, handleUpdateTicketsArray }) {
 
     return (
         <div>
-            {ticket.seat_id}
+            {ticketSeatId}
             <form onSubmit={handleSubmit}>
                 <select name="exchange" className="button" onChange={handleChange}>
                     {seat}
