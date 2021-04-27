@@ -7,11 +7,12 @@ import Calendar from './Calendar/Calendar'
 import About from './About/About'
 import Register from './Account/Register'
 import Sidebar from './Home/Sidebar'
+import ConcertDetail from './Calendar/ConcertDetail'
 // import LoginModal from './Modals/LoginModal'
 
 
 import { Switch, Route, Redirect } from "react-router-dom"
-import ConcertDetail from './Calendar/ConcertDetail'
+
 
 function App() {
 

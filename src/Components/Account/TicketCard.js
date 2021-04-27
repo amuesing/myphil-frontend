@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import SeatDetail from './SeatDetail'
 // import SeatCard from '../Calendar/SeatCard'
 
-function TicketCard({ ticket, handleDeletedTicket, seatObj }) {
+function TicketCard({ ticket, handleDeletedTicket }) {
     const [seats, setSeats] = useState([]);
     const [newSeatId, setNewSeatId] = useState([]);
     const [ticketSeatId, setTicketSeatId] = useState(ticket.seat_id)
@@ -60,6 +60,7 @@ function TicketCard({ ticket, handleDeletedTicket, seatObj }) {
     }, []);
 
     const seat = seats.map(seat =>
+        // seat.isReserved ? null : 
         <option value={seat.id}>
             {seat.section}
             {" || "}
@@ -70,8 +71,8 @@ function TicketCard({ ticket, handleDeletedTicket, seatObj }) {
 
     return (
         <div>
-            {ticketSeatId}
             <form onSubmit={handleSubmit}>
+            {ticketSeatId}
                 <select name="exchange" className="button" onChange={handleChange}>
                     {seat}
                 </select>

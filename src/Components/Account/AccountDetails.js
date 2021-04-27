@@ -19,7 +19,10 @@ function AccountDetails({ account, handleAccountUpdate }) {
         setTickets(updatedTicketsArray)
     }
 
-    function handleUpdateTicketsArray(id) { }
+    function handleUpdateTicketsArray(seat_id) {
+        // newTicket = { ...ticket , seat_id: seat_id };
+        // ticket[seat_id] = seat_id
+     }
         // const updatedTickets = tickets.map((ticket) => {
         // if (ticket.id === id) {
         //     ticket.is_open = false }
@@ -38,7 +41,7 @@ function AccountDetails({ account, handleAccountUpdate }) {
     />)
     
     return (
-        <div className="card">
+        <section className="card">
             <span>
                 {account.first_name}
             </span>
@@ -72,7 +75,8 @@ function AccountDetails({ account, handleAccountUpdate }) {
                         ticket = {ticket}
                     />
                 </div>
-            </div>
+        </section>
+
     )
 }
 

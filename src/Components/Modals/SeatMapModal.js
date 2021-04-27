@@ -40,9 +40,9 @@ function SeatMap({id}) {
       </button>
         <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="Select Seats" className="modal">
           <section>
-            <div className="modal-content">
+            <section className="modal-content">
               <SeatContainer />
-            </div>
+            </section>
             <button onClick={toggleModal}>
               Close 
             </button>

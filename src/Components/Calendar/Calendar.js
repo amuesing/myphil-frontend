@@ -19,9 +19,9 @@ function Calendar() {
 
     return (
  
-        <div className="concertObj">
+        <section className="concertObj">
              {concertObj}
-        </div>
+        </section>
     )
 }
 
