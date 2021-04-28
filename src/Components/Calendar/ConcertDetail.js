@@ -33,9 +33,9 @@ function ConcertDetail() {
 
     return (
         <section>
-            <div>
+            <section>
             <img src={image_url} alt={title} className="concert-detail-image"/>
-                <div className="card">
+                <section>
                     <span>
                         {date}
                     </span>
@@ -45,12 +45,14 @@ function ConcertDetail() {
                     <span>
                         {title}
                     </span>
-                    <span>
+                    
+                    <SeatMap id={id}/>
+                    <section className="concert-detail-text-container">
                         {event_info}
-                    </span>
-                </div>
-            </div>
-            <SeatMap id={id}/>
+                    </section>
+                </section>
+            </section>
+
         </section>  
     )
 }

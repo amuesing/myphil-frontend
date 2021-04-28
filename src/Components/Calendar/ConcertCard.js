@@ -6,11 +6,9 @@ function ConcertCard({concert}) {
     return (
         <section>
         <Link to={link} className="center">
-            <div className="card">
-                <div className="concert-card">
+            <span className="concert-card">
                     <img alt="concert" className="concert-card-image" src={concert.image_url}/>
-                </div>
-            </div>
+            </span>
             <span className="phase-buttons">
                 {concert.title}
                 {" || "}

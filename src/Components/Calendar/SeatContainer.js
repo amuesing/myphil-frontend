@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import SeatCard from './SeatCard'
-// import SeatChart from './SeatChart'
+import SeatMap from './SeatMap'
 
 function SeatContainer() {
     const [seats, setSeats] = useState([])
@@ -34,8 +34,8 @@ function SeatContainer() {
     return (
  
         <div>
-            {/* <SeatChart seats={seats}/> */}
-            {seatObj}
+            <SeatMap seats={seats}/>
+            {/* {seatObj} */}
         </div>
     )
 }
